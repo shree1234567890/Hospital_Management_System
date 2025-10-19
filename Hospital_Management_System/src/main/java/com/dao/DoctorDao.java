@@ -44,7 +44,7 @@ public class DoctorDao {
 
 	}
 
-	public List<Doctor> getAllDoctor()
+	public List<Doctor> getAlDoctor()
 	{
 		List<Doctor> list= new ArrayList<Doctor>();
 		Doctor d=null;
@@ -184,4 +184,5 @@ public class DoctorDao {
 	
 
 }
+
 
