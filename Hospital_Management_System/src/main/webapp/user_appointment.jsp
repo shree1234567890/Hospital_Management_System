@@ -119,7 +119,7 @@ response.setDateHeader("Expires", 0);
                                 <option value="">--select--</option>
                                 
                                 <%DoctorDao dao=new DoctorDao(DBConnect.getConn());
-                                List<Doctor> list = dao.getAllDoctor();
+                                List<Doctor> list = dao.getAlDoctor();
                                 for (Doctor d : list)
                                 {%>
                                 	<option value="<%=d.getId()%>"><%=d.getFullName() %> (<%=d.getSpecialst() %>)</option>
@@ -147,3 +147,4 @@ response.setDateHeader("Expires", 0);
     </div>
 </body>
 </html>
+
