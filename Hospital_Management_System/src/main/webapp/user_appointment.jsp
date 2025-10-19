@@ -73,7 +73,7 @@ response.setDateHeader("Expires", 0);
                         <c:remove var="succMsg" scope="session" />
                     </c:if>
 
-                    <form class="row g-3" action="add_appoint" method="post">
+                    <form class="row g-3" action="addAppointment" method="post">
                         <input type="hidden" name="userid" value="${userObj.id }">
 
                         <div class="col-md-6">
@@ -119,7 +119,7 @@ response.setDateHeader("Expires", 0);
                                 <option value="">--select--</option>
                                 
                                 <%DoctorDao dao=new DoctorDao(DBConnect.getConn());
-                                List<Doctor> list = dao.getAlDoctor();
+                                List<Doctor> list = dao.getAllDoctor();
                                 for (Doctor d : list)
                                 {%>
                                 	<option value="<%=d.getId()%>"><%=d.getFullName() %> (<%=d.getSpecialst() %>)</option>
